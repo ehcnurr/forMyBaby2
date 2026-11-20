@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html leng="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy anniversary, baby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Caveat:wght@500;600&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stykesheet" href="style.css">
+</head>
+
+<body>
+<section id="gift" class="screen active">
+    <button class="box-btn" id="boxBtn" aria-label="Open the gift">
+        <div class="note-peek"></div>
+        <div class="lid">
+            <div class="bow">
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+
+        <div class="box"></div>
+    </button>
+
+    <p class="gift-hint" id="giftHint">Click to open po baby^^</p>
+
+</section>
+
+<div class="overlay" id="noteOverlay">
+    <div class="note-card">
+        <button class="x" id="noteClose" aria-label="Close">&times;</button>></button>
+    </div>
+</div>
+
+<section id="months" class="screen">
+    <div class="wrap">
+        <div class="head">
+            <h1 id="monthsTitle">[Heading]</h1>
+            <p id="monthsSub">[Short Intro text]</p>
+        </div>
+        <div class="months" id="monthList"></div>
+    </div>
+</section>
+
+<section id="photots" class="screen">
+    <div class="wrap">
+        <div class="bar">
+            <button class="back" id="backBtn" aria-label="Back">&larr;</button>
+            <h2 id="monthHeading"></h2>
+        </div>
+
+        <div class="wall" id="wall"></div>
+    </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+    <button class="x" id="lbClose" aria-label="Close">&times;</button>
+    <div class="lb-inner" id="lbBody"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
