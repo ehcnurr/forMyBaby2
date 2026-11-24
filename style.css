@@ -206,12 +206,11 @@ button:focus-visible,
 
 .note-card {
     position: relative; 
-    max-width: min(92vw, 560px); 
-    max-height: 88vh; 
-    padding: 14px; 
+    width: min(88vw, 460px);
+    padding: 40px 28px 30px;
     background: var(--paper); 
     border-radius: var(--r);
-    animation: noteIn 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+    animation: noteIn 0.7s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
 }
 
 @keyframes noteIn {
@@ -225,25 +224,44 @@ button:focus-visible,
     }
 }
 
-.note-card img {
-    display: block; 
-    max-width: 100%; 
-    max-height: 78vh; 
-    margin: auto;
+.note-card::before {
+    content: "";
+    position: absolute; 
+    top: -12px; 
+    left: 50%; 
+    width: 80px; 
+    height: 24px; 
+    margin-left: -40px; 
+    background: var(--bg-2); 
+    opacity: 0.9; 
+    transform: rotate(-2deg);
 }
 
-.note-ph {
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
-    width: min(80vw, 480px); 
-    aspect-ratio: 3/4; 
-    padding: 20px; 
-    background: var(--blush); 
-    font-family: 'Caveat', cursive; 
-    font-size: 1.8rem; 
+.note-content {
+    max-height: calc(88vh - 90px); 
+    padding-left: 18px; 
+    border-left: 3px solid var(--blush); 
+    overflow-y: auto; 
+}
+
+.note-content h2 {
+    margin-bottom: 14px; 
+    font-size: clamp(1.6rem, 5vw, 2.1rem);
     color: var(--rose); 
-    text-align: center; 
+}
+
+.note-content p {
+    margin-bottom: 0.8rem; 
+    font-family: 'Caveat', cursive; 
+    font-size: 1.55rem; 
+    line-height: 1.3;
+}
+
+.note-content .note-sign {
+    margin-top: 20px; 
+    margin-bottom: 0; 
+    color: var(--rose); 
+    text-align: right;
 }
 
 .x {

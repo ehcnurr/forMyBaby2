@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html leng="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +31,12 @@
 <div class="overlay" id="noteOverlay">
     <div class="note-card">
         <button class="x" id="noteClose" aria-label="Close">&times;</button>></button>
+        
+        <div class="note-content">
+            <h2 id="noteTitle"></h2>
+            <div id="noteText"></div>
+            <p class="note-sign" id="noteSign"></p>
+        </div>
     </div>
 </div>
 
@@ -44,7 +50,7 @@
     </div>
 </section>
 
-<section id="photots" class="screen">
+<section id="photos" class="screen">
     <div class="wrap">
         <div class="bar">
             <button class="back" id="backBtn" aria-label="Back">&larr;</button>
