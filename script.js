@@ -1,7 +1,7 @@
 const TEXT = {
     giftHint: "Click to open po baby^^",
-    monthsTitle: "Memories of every month for us ",
-    monthsSub: "[Short intro text]",
+    monthsTitle: "Memories of every month for us!!!!!",
+    monthsSub: "This has been a very memorable year for us baby, and I cherish every single second that I got to spend alongside you, so I decided to compile our memories for each month we spent together^^",
     notePlaceholder: "[Your note image goes here]",
     photoPlaceholder: "[Photo]",
 
@@ -14,13 +14,18 @@ const TEXT = {
     noteSign: "[Your Name]"
 }; 
 
-const MONTHS = Array.from({length: 12}, (_, m) => ({
-    title: `[Month ${m+1} title]`,
+const MONTH_NAMES = [
+    "January", "February", "March", "April",
+    "May", "June", "July", "August", "September",
+    "October", "November", "December"
+];
+
+const MONTHS = MONTH_NAMES.map((name) => ({
+    title: name, 
 
     photos: Array.from({length: 10}, (_, p) => ({
-        src: "",  //photos path here
-        caption: `[Caption ${p+1}]`,
-        title: `[Photo ${p+1} heading]`,
+        src: "", //photos path here 
+        caption: `[Caption ${p+1} heading]`,
         details: [
             "[First paragraph of details. Replace with your own text.]",
             "[Second paragraph of details. Add or remove paragraphs as you like.]"
